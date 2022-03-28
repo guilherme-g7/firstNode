@@ -8,6 +8,7 @@ const Carro = require('./src/models/carro/carro_model');
 var list = [];
 
 var listaCarros = [];
+var listaUsuarios = [];
 
 
 var readFile = (file) => {
@@ -59,6 +60,12 @@ module.exports = (request, response) => {
             case '/carros':
                 response.writeHead(200, {'Content-Type': 'text/html'});
                 response.end(readFile("carros.html").replace("@$listaCarros@", listaCarros.length));
+
+                break;
+
+            case '/usuarios':
+                response.writeHead(200, {'Content-Type': 'text/html'});
+                response.end(readFile("usuarios.html").replace("@$listaUsuarios@", listaUsuarios.length));
 
                 break;
             case '/element':
