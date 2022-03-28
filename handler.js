@@ -3,7 +3,7 @@ const {parse} = require("querystring");
 
 var url = require('url');
 var path = require('path');
-const Carro = require('./src/carro/carro_model');
+const Carro = require('./src/models/carro/carro_model');
 
 var list = [];
 
@@ -32,10 +32,12 @@ var collectData = (method, rq, cal) => {
                 parseData['marca'], 
                 parseData['modelo'], 
                 parseData['preco'], 
-                parseData['valor_prestacao'],
+                parseData['valor_locacao'],
             );
 
+            console.log(novo_carro);
             listaCarros.push(novo_carro);
+            console.log(listaCarros);
 
         }
         
