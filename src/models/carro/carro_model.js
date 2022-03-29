@@ -9,4 +9,7 @@ module.exports = class CarroModel{
         this.valor_locacao = valor_locacao;
     }
 
+
 }
+
+
